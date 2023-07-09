@@ -8,7 +8,7 @@
 
 body {
     font-family:'Courier New', Courier, monospace;
-    background-color: #2c3e50;
+    /*background-color: #2c3e50;*/
 }
 nav {
     background: #cbb8e5;
@@ -29,8 +29,7 @@ nav ul {
     float: right;
     margin-right: 20px;
 }
-
-nav class1 {
+.morebutton {
     font-size: 30px;
     color: white;
     float:right;
@@ -55,6 +54,10 @@ nav ul li a {
     text-transform: uppercase;
 }
 
+#buttonmore {
+    display: none;
+}
+
 @media (max-width: 952px) {
     label.logo {
         font-size:30px;
@@ -66,7 +69,7 @@ nav ul li a {
 }
 
 @media (max-width:858px) {
-    nav class1 {
+    nav .morebutton {
         display: block;
     }
     ul {
@@ -77,33 +80,40 @@ nav ul li a {
         top: 80px;
         left:-100%;
         text-align: center;
+        transition: all .5s;
     }
     nav ul li {
         display: block;
+        line-height: 20px;
     }
 
     nav ul li a {
         font-size:20px;
     }
     a:hover,a.active {
-        background:none;
+        background: none;
+        color: #0082e6;
     }
-    class1:hover,class1.active {
-        position: fixed;
-        width:100%;
-        height:100vh;
-        background: #7a7ce5;
-        top: 80px;
-        left:-100%;
-        text-align: center;
+    #buttonmore:checked ~ nav ul {
+        left:0;
     }
 }
 
+content {
+    color: black;
+    text-align: center;
+    display: list-item;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*
 @media (max-width: 600px) {
     nav ul {
         display: none;
     }
-    nav class1 {
-        float: right;
+    .morebutton {
+        display: block;
     }
 }
+*/

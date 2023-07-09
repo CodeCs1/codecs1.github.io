@@ -1,5 +1,5 @@
+const button = document.getElementsByClassName(".morebutton");
+
 function main() {
-    main2.onclick() = function() {
-        console.log("hello world");
-    }
+    
 }
