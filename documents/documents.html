@@ -15,7 +15,7 @@
                         <a class="nav-link" href="#TerminalOS_Command">TerminalOS Command</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#CppOSEngine">C++OSEngine function</a>
+                        <a class="nav-link" href="#CppOSEngine">C++OSEngine (the basic)</a>
                     </li>
                     <li>
                         <a href="../index.html">-> Return to home</a>
@@ -31,17 +31,96 @@
                     </p>
                 </section>
                 <section id="CppOSEngine" class="main-section">
-                    <header>C++OSEngine function</header>
+                    <header>C++OSEngine (the basic)</header>
+                    <h1>What's C++OSEngine (real one though)</h1>
                     <p>
-                        Here is all the class you can find.
+                        If you are from my video bellow:
                     </p>
-                    <div class="filename">
-                        <code>(ACPI.h)</code>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/LY9KMAevv-o?controls=0&mute=1"></iframe>
+                    <h1>C++OSEngine function</h1>
+                    <p>
+                        Here is all the class you can use.
+                    </p>
+                    <div class="function">
+                        <div class="filename">
+                            <code>(ACPI.h)</code>
+                        </div>
+                        <p>
+                            <code>Shutdown(); //Shutdown the system.</code>
+                        </p>
+                        <code>Reboot(); //Reboot the system.</code>
                     </div>
-                    <p>
-                        <code>ACPI::Shutdown(); //Shutdown the system</code>
-                    </p>
-                    <code>ACPI::Reboot(); //Reboot the system</code>
+                    <div class="function">
+                        <div class="filename">
+                            <code>(console.h)</code>
+                        </div>
+                        <div class="text-white">
+                            <code>'Console' class</code>
+                        </div>
+                        <p>
+                            <code>Clear(); //Clear the screen.</code>
+                        </p>
+                        <p>
+                            <code>ReadLine(); //read a string from user input.</code>
+                        </p>
+                        <p>
+                            <code>WriteChr(char); //Write a character.</code>
+                        </p>
+                        <p>
+                            <code>Write(str); //Write the text.</code>
+                        </p>
+                        <code>WriteLine(str); //Write the text, followed by the current line terminator.</code>
+
+                        <div class="text-white">
+                            <p>
+                                'ConsoleColor' class (not used)
+                            </p>
+                        </div>
+                        <p>
+                            <code>BackgroundColor(text_color (int), bg_color (int)); //changed backgroud color</code>
+                        </p>
+                        <p>
+                            <code>BackgroundColorFromColorCode(color_code (int)); //changed backgroud color from color code (hex)</code>
+                        </p>
+                        <p>
+                            <code>WriteLine(str,text_color (int), color_code (int)); //write the text with color</code>
+                        </p>
+                    </div>
+                    <div class="function">
+                        <div class="filename">
+                            <code>(kernel.h)</code>
+                        </div>
+                        <div class="text-white">
+                            <code>'Assembly' class</code>
+                        </div>
+                        <p>
+                            <code>in(port); //read from I/O port (8-bit).</code>
+                        </p>
+                        <p>
+                            <code>out(port,data) //write data to I/O port (8-bit).</code>
+                        </p>
+                        <p>
+                            <code>inw(port); // same as 'in' function but use 16-bit.</code>
+                        </p>
+                        <p>
+                            <code>outw(port); // same as 'out' function but use 16-bit.</code>
+                        </p>
+
+                        <div class="text-white">
+                            <p>
+                                'Kernel' class
+                            </p>
+                        </div>
+                        <p>
+                            <code>void BeforeStart() override {} //Start something up before start</code>
+                        </p>
+                        <p>
+                            <code>void Start() override {} // start the Kernel here</code>
+                        </p>
+                        <p>
+                            <code>void AfterStart() override {} //Make a custom code instead of halt the system</code>
+                        </p>
+                    </div>
                 </section>
             </div>
         </main>

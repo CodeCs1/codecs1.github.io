@@ -121,3 +121,7 @@ p {
     font-size: 20px;
     background-color: #585858;
 }
+
+.text-white {
+    color: #fff;
+}
