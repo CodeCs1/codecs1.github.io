@@ -117,6 +117,12 @@ content {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+content ul li {
+    display:  inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
 
 /*
 @media (max-width: 600px) {
