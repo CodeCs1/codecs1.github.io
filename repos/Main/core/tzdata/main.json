@@ -1,0 +1,24 @@
+{
+    "package": "tzdata",
+    "version": "2024a",
+    "URL": [
+        "https://www.iana.org/time-zones/repository/releases/tzdata2024a.tar.gz"
+    ],
+    "file": [
+        "tzdata2024a.tar.gz"
+    ],
+    "PostBuild": [
+        "ZONEINFO=/usr/share/zoneinfo",
+        "mkdir -pv $ZONEINFO/{posix,right}"
+    ],
+    "Build": [
+        "ZONEINFO=/usr/share/zoneinfo",
+        "for tz in etcetera southamerica northamerica europe africa antarctica            asia australasia backward; do     zic -L /dev/null   -d $ZONEINFO       ${tz};     zic -L /dev/null   -d $ZONEINFO/posix ${tz};     zic -L leapseconds -d $ZONEINFO/right ${tz}; done",
+        "cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO"   
+    ],
+    "enabletest": false,
+    "Install": [
+        "ZONEINFO=/usr/share/zoneinfo",
+        "zic -d $ZONEINFO -p Asia/Ho_Chi_Minh"
+    ]
+}

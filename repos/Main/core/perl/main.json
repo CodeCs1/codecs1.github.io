@@ -1,0 +1,34 @@
+{
+    "package":"perl",
+    "version":"5.40.0",
+    "URL":[
+        "https://www.cpan.org/src/5.0/perl-5.40.0.tar.xz"
+    ],
+    "file":[
+        "perl-5.40.0.tar.xz"
+    ],
+    "PostBuild":[
+        "export BUILD_ZLIB=False",
+        "export BUILD_BZIP2=0",
+        "sh Configure -des -Dprefix=/usr -Dvendorprefix=/usr -Dprivlib=/usr/lib/perl5/5.40/core_perl -Darchlib=/usr/lib/perl5/5.40/core_perl -Dsitelib=/usr/lib/perl5/5.40/site_perl     -Dsitearch=/usr/lib/perl5/5.40/site_perl    -Dvendorlib=/usr/lib/perl5/5.40/vendor_perl -Dvendorarch=/usr/lib/perl5/5.40/vendor_perl-Dman1dir=/usr/share/man/man1 -Dman3dir=/usr/share/man/man3 -Dpager=\"/usr/bin/less -isR\" -Duseshrplib -Dusethreads"
+    ],
+    "Build": [
+        "export BUILD_ZLIB=False",
+        "export BUILD_BZIP2=0",
+        "make"
+    ],
+    "Comment1": "Recommend not to run the test because it took about 11 SBU~1-2 hours to run",
+    "skip_fail_test": true,
+    "enabletest":true,
+    "Test":[
+        "export BUILD_ZLIB=False",
+        "export BUILD_BZIP2=0",
+        "TEST_JOBS=$(nproc) make test_harness"
+    ],
+    "Install":[
+        "export BUILD_ZLIB=False",
+        "export BUILD_BZIP2=0",
+        "make install",
+        "unset BUILD_ZLIB BUILD_BZIP2"
+    ]
+}

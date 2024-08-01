@@ -1,0 +1,23 @@
+{
+    "package":"file",
+    "version":"5.45",
+    "URL":[
+        "https://astron.com/pub/file/file-5.45.tar.gz"
+    ],
+    "file":[
+        "file-5.45.tar.gz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":true,
+    "Test":[
+        "make check"
+    ],
+    "Install":[
+        "make install"
+    ]
+}

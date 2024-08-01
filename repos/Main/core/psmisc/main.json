@@ -1,0 +1,23 @@
+{
+    "package":"psmisc",
+    "version":"23.7",
+    "URL":[
+        "https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz"
+    ],
+    "file":[
+        "psmisc-23.7.tar.xz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":true,
+    "Test":[
+        "make check"
+    ],
+    "Install":[
+        "make install"   
+    ]
+}

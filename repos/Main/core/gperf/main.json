@@ -1,0 +1,24 @@
+{
+    "package":"gperf",
+    "version":"3.1",
+    "URL":[
+        "https://ftp.gnu.org/gnu/gperf/gperf-3.1.tar.gz"
+    ],
+    "file":[
+        "gperf-3.1.tar.gz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.1"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":true,
+    "skip_fail_test":true,
+    "Test":[
+        "make check -j1"
+    ],
+    "Install":[
+        "make install"
+    ]
+}

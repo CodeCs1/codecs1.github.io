@@ -1,0 +1,22 @@
+{
+    "package":"zstd",
+    "version":"1.5.6",
+    "URL":[
+        "https://github.com/facebook/zstd/releases/download/v1.5.6/zstd-1.5.6.tar.gz"
+    ],
+    "file":[
+        "zstd-1.5.6.tar.gz"
+    ],
+    "PostBuild":[],
+    "Build": [
+        "make prefix=/usr"
+    ],
+    "enabletest":true,
+    "Test":[
+        "make check"
+    ],
+    "Install":[
+        "make prefix=/usr install",
+        "rm -v /usr/lib/libzstd.a"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "package":"make-ca",
+    "version":"1.13",
+    "URL":[
+        "https://github.com/lfs-book/make-ca/releases/download/v1.13/make-ca-1.13.tar.xz"
+    ],
+    "file":[
+        "make-ca-1.13.tar.xz"
+    ],
+    "PostBuild":[],
+    "Build": [],
+    "enabletest":false,
+    "Install":[
+        "make install",
+        "install -vdm755 /etc/ssl/local",
+        "/usr/sbin/make-ca -g"
+    ]
+}

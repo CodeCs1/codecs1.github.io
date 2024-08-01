@@ -1,0 +1,20 @@
+{
+    "package": "iana-etc",
+    "version": "20240612",
+    "URL": [
+        "https://github.com/Mic92/iana-etc/releases/download/20240612/iana-etc-20240612.tar.gz"
+    ],
+    "file": [
+        "iana-etc-20240612.tar.gz"
+    ],
+    "PostBuild": [
+        "echo Nothing to prepare"
+    ],
+    "Build": [
+        "echo Nothing to build"
+    ],
+    "enabletest": false,
+    "Install": [
+        "cp services protocols /etc"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "package": "bzip2",
+    "version": "1.0.8",
+    "URL": [
+        "https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+        "https://www.linuxfromscratch.org/patches/lfs/development/bzip2-1.0.8-install_docs-1.patch"
+    ],
+    "file": [
+        "bzip2-1.0.8.tar.gz"
+    ],
+    "patch": [
+        "bzip2-1.0.8-install_docs-1.patch"
+    ],
+    "PostBuild": [
+        "sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' Makefile",
+        "sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" Makefile",
+        "make -f Makefile-libbz2_so",
+        "make clean"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest": false,
+    "Install": [
+        "make PREFIX=/usr install",
+        "cp -av libbz2.so.* /usr/lib",
+        "ln -sv libbz2.so.1.0.8 /usr/lib/libbz2.so",
+        "cp -v bzip2-shared /usr/bin/bzip2",
+        "for i in /usr/bin/{bzcat,bunzip2}; do   ln -sfv bzip2 $i; done",
+        "rm -fv /usr/lib/libbz2.a"
+    ]
+}

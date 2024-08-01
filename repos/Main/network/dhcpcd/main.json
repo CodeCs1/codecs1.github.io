@@ -1,0 +1,26 @@
+{
+  "package": "dhcpcd",
+  "version": "10.0.8",
+  "URL": ["https://github.com/NetworkConfiguration/dhcpcd/releases/download/v10.0.8/dhcpcd-10.0.8.tar.xz"],
+  "file": [
+    "dhcpcd-10.0.8.tar.xz"
+  ],
+  "PostBuild": [
+    "install  -v -m700 -d /var/lib/dhcpcd",
+    "groupadd -g 52 dhcpcd",
+    "useradd  -c 'dhcpcd PrivSep' -d /var/lib/dhcpcd -g dhcpcd -s /bin/false -u 52 dhcpcd",
+    "chown    -v dhcpcd:dhcpcd /var/lib/dhcpcd",
+    "sed '/Deny everything else/i SECCOMP_ALLOW(__NR_getrandom),' -i src/privsep-linux.c",
+    "./configure --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/dhcpcd --dbdir=/var/lib/dhcpcd --runstatedir=/run  --privsepuser=dhcpcd"
+  ],
+  "Build": [
+    "make"
+  ],
+  "enabletest": true,
+  "Test": [
+    "make test"
+  ],
+  "Install": [
+    "make install"
+  ]
+}

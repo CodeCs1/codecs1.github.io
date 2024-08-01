@@ -1,0 +1,27 @@
+{
+    "package":"openssl",
+    "version":"3.3.1",
+    "URL":[
+        "https://www.openssl.org/source/openssl-3.3.1.tar.gz"
+    ],
+    "file":[
+        "openssl-3.3.1.tar.gz"
+    ],
+    "PostBuild":[
+        "./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic"
+    ],
+    "Build": [
+        "make"
+    ],
+    "skip_fail_test":true,
+    "enabletest":true,
+    "Test":[
+        "HARNESS_JOBS=$(nproc) make test"
+    ],
+    "Install":[
+        "sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile",
+        "make MANSUFFIX=ssl install",
+        "mv -v /usr/share/doc/openssl /usr/share/doc/openssl-3.3.1",
+        "cp -vfr doc/* /usr/share/doc/openssl-3.3.1"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "package":"patch",
+    "version":"2.7.6",
+    "URL":[
+        "https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz"
+    ],
+    "file":[
+        "patch-2.7.6.tar.xz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":true,
+    "Test":[
+        "make check"
+    ], 
+    "Install":[
+        "make install"
+    ]
+}

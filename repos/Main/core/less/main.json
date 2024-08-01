@@ -1,0 +1,23 @@
+{
+    "package":"less",
+    "version":"643",
+    "URL":[
+        "https://www.greenwoodsoftware.com/less/less-643.tar.gz"
+    ],
+    "file":[
+        "less-643.tar.gz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr --sysconfdir=/etc"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":true,
+    "Test":[
+        "make check"
+    ],
+    "Install":[
+        "make install"
+    ]
+}

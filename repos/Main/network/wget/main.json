@@ -1,0 +1,12 @@
+{
+  "package": "wget",
+  "version": "1.24.5",
+  "URL": ["https://ftp.gnu.org/gnu/wget/wget-1.24.5.tar.gz"],
+  "file": ["wget-1.24.5.tar.gz"],
+  "Dependencies":["security/make-ca"],
+  "PostBuild": ["./configure --prefix=/usr --sysconfdir=/etc --with-ssl=openssl"],
+  "Build": ["make"],
+  "enabletest": true,
+  "Test": ["make check"],
+  "Install": ["make install"]
+}

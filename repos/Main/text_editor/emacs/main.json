@@ -1,0 +1,22 @@
+{
+    "package":"emacs",
+    "version":"29.4",
+    "URL":[
+        "https://ftp.gnu.org/gnu/emacs/emacs-29.4.tar.xz"
+    ],
+    "file":[
+        "emacs-29.4.tar.xz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":false,
+    "Install":[
+        "make install",
+        "chown -v -R root:root /usr/share/emacs/29.4",
+        "rm -vf /usr/lib/systemd/user/emacs.service"
+    ]
+}

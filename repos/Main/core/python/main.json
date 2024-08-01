@@ -1,0 +1,26 @@
+{
+    "package":"Python",
+    "version":"3.12.4",
+    "URL":[
+        "https://www.python.org/ftp/python/3.12.4/Python-3.12.4.tar.xz",
+        "https://www.python.org/ftp/python/doc/3.12.4/python-3.12.4-docs-html.tar.bz2"
+    ],
+    "file":[
+        "Python-3.12.4.tar.xz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr --enable-shared --with-system-expat --enable-optimizations"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":true,
+    "skip_fail_test": true,
+    "Test":[
+        "make test TESTOPTS=\"--timeout 120\" -j$(nproc)"
+    ],
+    "Install":[
+        "make install",
+        "ln -sfv /usr/bin/pip3 /usr/bin/pip"
+    ]
+}

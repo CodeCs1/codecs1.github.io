@@ -1,0 +1,24 @@
+{
+    "package":"groff",
+    "version":"1.23.0",
+    "URL":[
+        "https://ftp.gnu.org/gnu/groff/groff-1.23.0.tar.gz"
+    ],
+    "file":[
+        "groff-1.23.0.tar.gz"
+    ],
+    "PostBuild":[
+        "PAGE=A4 ./configure --prefix=/usr"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":true,
+    "skip_fail_test":true,
+    "Test":[
+        "make check"
+    ],
+    "Install":[
+        "make install"
+    ]
+}

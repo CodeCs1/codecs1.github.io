@@ -1,0 +1,23 @@
+{
+    "package":"iproute2",
+    "version":"6.9.0",
+    "URL":[
+        "https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.9.0.tar.xz"
+    ],
+    "file":[
+        "iproute2-6.9.0.tar.xz"
+    ],
+    "PostBuild":[
+        "sed -i /ARPD/d Makefile",
+        "rm -fv man/man8/arpd.8"
+    ],
+    "Build": [
+        "make NETNS_RUN_DIR=/run/netns"
+    ],
+    "enabletest":false,
+    "Install":[
+        "make SBINDIR=/usr/sbin install",
+        "mkdir -pv             /usr/share/doc/iproute2-6.9.0",
+        "cp -v COPYING README* /usr/share/doc/iproute2-6.9.0"
+    ]
+}

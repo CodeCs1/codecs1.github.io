@@ -1,0 +1,18 @@
+{
+    "package":"MarkupSafe",
+    "version":"2.1.5",
+    "URL":[
+        "https://pypi.org/packages/source/M/MarkupSafe/MarkupSafe-2.1.5.tar.gz"
+    ],
+    "file":[
+        "MarkupSafe-2.1.5.tar.gz"
+    ],
+    "PostBuild":[],
+    "Build": [
+        "pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD"
+    ],
+    "enabletest":false,
+    "Install":[
+        "pip3 install --no-index --no-user --find-links dist Markupsafe"
+    ]
+}   

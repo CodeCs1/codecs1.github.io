@@ -1,0 +1,20 @@
+{
+    "package":"acl",
+    "version":"2.3.2",
+    "URL":[
+        "https://download.savannah.gnu.org/releases/acl/acl-2.3.2.tar.xz"
+    ],
+    "file":[
+        "acl-2.3.2.tar.xz"
+    ],
+    "PostBuild":[
+        "./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/acl-2.3.2"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":false,
+    "Install":[
+        "make install"
+    ]
+}

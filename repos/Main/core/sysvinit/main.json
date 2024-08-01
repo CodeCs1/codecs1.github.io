@@ -1,0 +1,22 @@
+{
+    "package":"sysvinit",
+    "version":"3.09",
+    "URL":[
+        "https://github.com/slicer69/sysvinit/releases/download/3.09/sysvinit-3.09.tar.xz",
+        "https://www.linuxfromscratch.org/patches/lfs/development/sysvinit-3.09-consolidated-1.patch"
+    ],
+    "file":[
+        "sysvinit-3.09.tar.xz"
+    ],
+    "patch": [
+        "sysvinit-3.09-consolidated-1.patch"
+    ],
+    "PostBuild":[],
+    "Build": [
+        "make"
+    ],
+    "enabletest":false,
+    "Install":[
+        "make install"
+    ]
+}

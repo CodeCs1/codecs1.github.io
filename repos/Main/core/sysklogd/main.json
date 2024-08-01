@@ -1,0 +1,22 @@
+{
+    "package":"sysklogd",
+    "version":"1.5.1",
+    "URL":[
+        "https://github.com/troglobit/sysklogd/releases/download/v2.5.2/sysklogd-2.5.2.tar.gz"
+    ],
+    "file":[
+        "sysklogd-1.5.1.tar.gz"
+    ],
+    "PostBuild":[
+        "sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c",
+        "sed -i 's/union wait/int/' syslogd.c"
+    ],
+    "Build": [
+        "make"
+    ],
+    "enabletest":false,
+    "Install":[
+        "make install",
+        "cat > /etc/syslog.conf << \"EOF\"\n# Begin /etc/syslog.conf\nauth,authpriv.* -/var/log/auth.log\n*.*;auth,authpriv.none -/var/log/sys.log\ndaemon.* -/var/log/daemon.log\nkern.* -/var/log/kern.log\nmail.* -/var/log/mail.log\nuser.* -/var/log/user.log\n*.emerg *\n\n# End /etc/syslog.conf\nEOF"
+    ]
+}
