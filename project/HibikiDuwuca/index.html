@@ -6,6 +6,7 @@
     <head>
         <title>Hibiki Duwuca Linux System</title>
         <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
     </head>
     <body>
         <header class="wbar">
@@ -13,8 +14,8 @@
                 <h2>Code-dev</h2>
             </a>
             <div class="content">
-                <a href="#" id="Button">Download</a>
-                <a href="#" id="Button">About this project</a>
+                <a href="https://github.com/CodeCs1/HibikiDuwuCa-LinuxSystem/releases/tag/LIVECD" id="Button" title="Download the ISO">Download</a>
+                <a href="#" id="Button" onclick="_show_('AboutBox');return false;" title="About this project">About this project</a>
             </div>
         </header>
         <section class="upper">
@@ -23,5 +24,10 @@
                 <p>The first (?) Linux From Scratch Operating System that inspired by a Vietnamese Vtuber called Hibiki Duca.</p>
             </div>
         </section>
+        <div class="MessageBox" id="AboutBox">
+            <p id="Title">About this project</p>
+            <p id="Content">As a VTuber fan, this project used to be ... blah blah</p>
+            <a href="#" id="CloseBtn" onclick="_close_('AboutBox');return false;">Close</a>
+        </div>
     </body>
 </html>
