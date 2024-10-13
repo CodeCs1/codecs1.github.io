@@ -93,6 +93,11 @@ body {
     display: none;
     transform: translateX(-50%);
     animation: sm-app .1s ease forwards;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 .MessageBox #Title {
     background-color: rgb(238, 182, 182);
