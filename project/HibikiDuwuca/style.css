@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #FDDDC6 23%, #FFB9BA 60%);
+    height: 100vh;
+    width: 100%;
+}
+
+.upper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.upper h2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-size: 1cm;
+}
+.upper p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+.wbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 20px 15px;
+}
+
+.wbar a {
+    text-decoration: none;
+}
+
+.wbar .content #Button:hover {
+    background-color: rgba(254,179,180,0.79);
+    border-radius: 15.5px;
+    color: rgba(49,48,48,1);
+    transition: .3s;
+}
+
+.wbar .content #Button:not(:hover) {
+    color: rgba(76,74,74,0.79);
+    border-radius: 5.5px;
+    transition: .4s;
+}
+
+.wbar .content #Button {
+    padding: 10px 20px 10px 20px;
+    color: rgba(76,74,74,0.9);
+}
+
+
+.wbar .text {
+    color: #000000;
+    font-family: "IBM Plex Mono", monospace;
+    font-style: italic;
+}
+
+
+img {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+}
