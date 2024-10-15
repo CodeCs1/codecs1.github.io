@@ -92,11 +92,12 @@ body {
     height: auto;
     display: none;
     transform: translateX(-50%);
+    max-width: 500px;
     animation: sm-app .1s ease forwards;
-
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index: 1 !important; 
 
 }
 .MessageBox #Title {

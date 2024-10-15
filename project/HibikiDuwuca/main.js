@@ -23,6 +23,7 @@ function _show_(elementID) {
 function _close_(elementID) {
     var x = document.getElementById(elementID);
     x.style.display = "none";
+    tmp.sort();
     if (BinarySearch(tmp, elementID)) {
         const ind = tmp.indexOf(elementID);
         tmp.splice(ind,1);

@@ -15,6 +15,7 @@
             </a>
             <div class="content">
                 <a href="https://github.com/CodeCs1/HibikiDuwuCa-LinuxSystem/releases/tag/LIVECD" id="Button" title="Download the ISO">Download</a>
+                <a href="#" id="Button" onclick="_show_('HowToBox')" title="How to do thing with this Linux System">HowTo</a>
                 <a href="#" id="Button" onclick="_show_('AboutBox');return false;" title="About this project">About this project</a>
             </div>
         </header>
@@ -24,6 +25,22 @@
                 <p>The first (?) Linux From Scratch Operating System that inspired by a Vietnamese Vtuber called Hibiki Duca.</p>
             </div>
         </section>
+
+        <div class="MessageBox" id="HowToBox">
+            <p id="Title">How To Install</p>
+            <p id="Content">
+                There are 2 ways to do that:<br>
+                #1: Download the ISO, boot up, login as 'root' (pw: root)
+                <br>
+                    And then follow this instruction:<br>
+                        Mount main drive -> format with cfdisk or fdisk -> chroot -> install base component with <br>'duca -i base*'
+                <br>#2: Download the duca's package manager
+                    follow this instruction:<br>
+                        [Same as #1] but instead of chroot, run this:<br>
+                        'duca -i base* -root=[mount root]'
+            </p>
+            <a href="#" id="CloseBtn" onclick="_close_('HowToBox');return false;">OK</a>
+        </div>
         <div class="MessageBox" id="AboutBox">
             <p id="Title">About this project</p>
             <p id="Content">As a VTuber fan, this project used to be ... blah blah</p>
