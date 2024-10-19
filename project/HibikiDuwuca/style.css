@@ -31,6 +31,24 @@ body {
     font-style: italic;
 }
 
+.upper {
+    color: black;
+}
+.upper a {
+    text-decoration: overline;
+    color: black;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.upper a:hover {
+    transition: .5s;
+    color:rgb(70, 70, 70);
+}
+
+.upper a:not(:hover) {
+    color: black;
+    transform: .5s;
+}
 
 .wbar {
     display: flex;
@@ -61,7 +79,6 @@ body {
     padding: 10px 20px 10px 20px;
     color: rgba(76,74,74,0.9);
 }
-
 
 .wbar .text {
     color: #000000;
@@ -98,6 +115,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     z-index: 1 !important; 
+    color: black;
 
 }
 .MessageBox #Title {
