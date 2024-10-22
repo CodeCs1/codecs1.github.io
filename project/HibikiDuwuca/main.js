@@ -32,12 +32,11 @@ function _close_(elementID) {
     }
 }
 
-let lang = 0; // 0 -> EN; 1 -> JP
-
 function getCookieValue(name) {
     const r = new RegExp(`(^| )${name}=([^;]+)`)
     const match = document.cookie.match(r);
     if (match) return match[2];
+    else document.cookie = name + " = 0;";
 }
 
 function changeBefore() {
@@ -52,7 +51,6 @@ function changeBefore() {
 }
 
 function change() {
-    console.log(document.querySelectorAll(".upper .content")[0].childNodes);
     lang = getCookieValue('lang');
     if (lang == 0) {
         //bar
