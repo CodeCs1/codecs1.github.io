@@ -86,6 +86,10 @@ body {
     font-style: italic;
 }
 
+.wbar .content {
+    font-family: "IBM Plex Mono", monospace;
+}
+
 @keyframes sm-app {
     to {
         top: 50%;

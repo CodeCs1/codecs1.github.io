@@ -8,15 +8,16 @@
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
     </head>
-    <body>
+    <body onload="changeBefore()">
         <header class="wbar">
             <a class="text" href="https://codecs1.github.io">
                 <h2>Code-dev</h2>
             </a>
             <div class="content">
-                <a href="https://github.com/CodeCs1/HibikiDuwuCa-LinuxSystem/releases/tag/LIVECD" id="Button" title="Download the ISO">Download</a>
-                <a href="#" id="Button" onclick="_show_('HowToBox')" title="How to do thing with this Linux System">HowTo</a>
-                <a href="#" id="Button" onclick="_show_('AboutBox');return false;" title="About this project">About this project</a>
+                <a href="https://github.com/CodeCs1/HibikiDuwuCa-LinuxSystem/releases/tag/LIVECD" class="DownloadBtn" id="Button" title="Download the ISO">Download</a>
+                <a href="#" id="Button" class="HowtoBox" onclick="_show_('HowToBox')" title="How to do thing with this Linux System">HowTo</a>
+                <a href="#" id="Button" class="AboutBox" onclick="_show_('AboutBox');return false;" title="About this project">About this project</a>
+                <a href="#" id="Button" class="Change" onclick="change(); return false;">日本語に変更</a>
             </div>
         </header>
         <section class="upper">
