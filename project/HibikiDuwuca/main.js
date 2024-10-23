@@ -47,26 +47,33 @@ function changeBefore() {
         wbar[0].childNodes[3].textContent = "方法";
         wbar[0].childNodes[5].textContent = "プロジェクトについて";
         wbar[0].childNodes[7].textContent = "Change to English";
+        var upper_content = document.querySelectorAll(".upper .content");
+        upper_content[0].childNodes[1].textContent = "響 ゆうか リナックス システム";
+        upper_content[0].childNodes[1].style.fontFamily = "Klee One";
     }
 }
 
 function change() {
     lang = getCookieValue('lang');
+    var wbar = document.querySelectorAll(".wbar .content");
+    var upper_content = document.querySelectorAll(".upper .content");
     if (lang == 0) {
         //bar
-        var wbar = document.querySelectorAll(".wbar .content");
         wbar[0].childNodes[1].textContent = "ダウンロード";
         wbar[0].childNodes[3].textContent = "方法";
         wbar[0].childNodes[5].textContent = "プロジェクトについて";
         wbar[0].childNodes[7].textContent = "Change to English";
+        upper_content[0].childNodes[1].textContent = "響 ゆうか リナックス システム";
+        upper_content[0].childNodes[1].style.fontFamily = "Klee One";
         document.cookie = "lang = 1;";
     } else if (lang == 1) {
         //bar
-        var wbar = document.querySelectorAll(".wbar .content");
         wbar[0].childNodes[1].textContent = "Download";
         wbar[0].childNodes[3].textContent = "HowTo";
         wbar[0].childNodes[5].textContent = "About this project";
         wbar[0].childNodes[7].textContent = "日本語に変更";
+        upper_content[0].childNodes[1].textContent = "Hibiki Duwuca Linux System";
+        upper_content[0].childNodes[1].style.fontFamily = "Dancing Script";
         document.cookie = "lang = 0;";
     }
 }
