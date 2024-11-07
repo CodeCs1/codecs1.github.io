@@ -36,7 +36,7 @@ function getCookieValue(name) {
     const r = new RegExp(`(^| )${name}=([^;]+)`)
     const match = document.cookie.match(r);
     if (match) return match[2];
-    else document.cookie = name + " = 0;";
+    else document.cookie = localStorage.getItem(name)
 }
 
 function changeBefore() {
@@ -54,6 +54,7 @@ function changeBefore() {
 }
 
 function change() {
+    document.cookie = localStorage.getItem("lang");
     lang = getCookieValue('lang');
     var wbar = document.querySelectorAll(".wbar .content");
     var upper_content = document.querySelectorAll(".upper .content");
@@ -66,6 +67,7 @@ function change() {
         upper_content[0].childNodes[1].textContent = "響 ゆうか リナックス システム";
         upper_content[0].childNodes[1].style.fontFamily = "Klee One";
         document.cookie = "lang = 1;";
+        localStorage.setItem("lang", "1");
     } else if (lang == 1) {
         //bar
         wbar[0].childNodes[1].textContent = "Download";
@@ -75,5 +77,6 @@ function change() {
         upper_content[0].childNodes[1].textContent = "Hibiki Duwuca Linux System";
         upper_content[0].childNodes[1].style.fontFamily = "Dancing Script";
         document.cookie = "lang = 0;";
+        localStorage.setItem("lang", "0");
     }
 }
