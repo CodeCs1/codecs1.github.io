@@ -1,45 +1,65 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #121212;
     padding: 20px;
+    color: white;
 }
-
-#sort-options {
-    padding: 10px;
-}
-
-.sort-container {
-    text-align: right;
-}
-
 .blog-list {
-    max-width: 800px;
-    margin: auto;
+  max-width: 800px;
+  margin: auto;
+}
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#sort-options {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+
+  background-color: #bb86fc;
+}
+#NewBlog {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #bb86fc;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#NewBlog:hover {
+  background-color: #3700b3;
+  color: white;
 }
 .blog-post {
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .blog-post a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 .blog-post h2 {
-    margin-top: 0;
-}
-#sort-options {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
+  margin-top: 0;
 }
 
-.home-button {
+#Name {
     text-decoration: none;
-    color: black;
+    color: white;
+    user-select: none;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:700;
+    font-weight: 700;
 }
