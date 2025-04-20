@@ -1,27 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
 body {
-    background: #f39b9b72;
+    background-color: #1f85fa;
 }
 
-#button1 {
-    background-color: green;
-    width: 250px;
-    height: 50px;
-    font-size: large;
-    position: relative;
-    margin: auto;
-    transform: translate3d(0px, 0%, 0px);
+.about-me {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background: white;
+    z-index: 15;
+    top: 50%;
+    left:50%;
+    margin: -200px 0 0 -150px;
+    border-radius: 20px;
+}
+.about-me .header {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.about-me .body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.about-me .return-button {
+    position: absolute;
+    border:none;
+    outline:0;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10%;
+    margin-left: 30%;
+    border-radius: 30px;
+    background-color: #2f21f3;
+    color: white;
+    font-family: "Playwrite AU SA", cursive;
+}
+.about-me .return-button:hover {
+    background-color: #2017a3; 
+}
+
+.list-social a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     text-decoration: none;
-    font-weight: 600;
-    letter-spacing: .05em;
-    transition-delay: .6s;
-    overflow: hidden;
-    border: 1px;
+    color: black;
 }
 
-.codetext {
-    display:inline-block
-}
-
-#button1::after {
-    content: '';
+.fa {
+    margin-left: 33%;
+    margin-bottom: 10px;
 }

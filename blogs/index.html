@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<html>
-    <head>
-        <title>Code-dev's Blog page</title>
-        <link rel="icon", type="image/x-icon" href="../favicon.ico">
-        <script src="main.js"></script>
-    </head>
-    <body onload="loadnotification()">
-        <p>There will be blog page later. Stay tuned.</p>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon", type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <a href="../index.html" class="home-button">Code-dev</a>
+  <div class="blog-list">
+    <h1>Welcome to My Blog</h1>
+
+    <div class="sort-container">
+        <select id="sort-options">
+            <option value="date-new">Sort by Date (Newest First)</option>
+            <option value="date-old">Sort by Date (Oldest First)</option>
+            <option value="name-az">Sort by Name (A–Z)</option>
+            <option value="name-za">Sort by Name (Z–A)</option>
+        </select>
+    </div>
+
+    <div id="posts-container">
+      <!-- Blog posts go here -->
+    </div>
+  </div>
+
+  <script src="post.js"></script>
+</body>
 </html>
