@@ -1,71 +1,13 @@
-body {
-    background-color: #121212;
-    color: #edc1ed;
-    font-family: 'Courier New', Courier, monospace;
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+#webname {
+    user-select: none;
 }
 
-.wbar {
-    background-color: #3f3f3f;
-    border-radius: 5px 5px 5px 5px;
+.bg-dark-custom { background-color: #121212; }
+.bg-dark-custom2 { background-color: black; }
+.transition-height {
+    transition: max-height 0.3s ease-in-out;
     overflow: hidden;
-}
-.WelcomeText {
-    color: #edc1ed;
-    text-align: center;
-    font-family: "Edu AU VIC WA NT Guides", cursive;
-}
-
-.HButton {
-    text-decoration: none;
-    color: #edc1ed;
-}
-
-.wbar a:hover {
-    background-color: rgba(28,28,27,0.8);
-    transition: 0.7s;
-}
-
-.DButton {
-    text-decoration: none;
-    color: #edc1ed;
-}
-.BButton {
-    text-decoration: none;
-    color: #edc1cd;
-}
-.BAbout {
-    text-decoration: none;
-    color: #edc1ed;
-}
-
-.PButton {
-    text-decoration: none;
-    color: #edc1ed;
-}
-
-.wbar a {
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-#menu-icon {
-    display: none;
-}
-
-@media (max-width: 498px) {
-    #menu-icon {
-        display: block;
-    }
-
-    .wbar {
-        top: 50%;
-        right: 0;
-        height: 20vh;
-        display: flex;
-        transition: all .55s ease;
-    }
-
 }
