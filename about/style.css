@@ -42,14 +42,23 @@ body {
     background-color: #2017a3; 
 }
 
+.list-social {
+	margin-left: 33%;
+}
+
+.list-social a:hover {
+	font-weight: bold;
+	font-size: 19px;
+}
+
 .list-social a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-decoration: none;
     color: black;
+    margin-right: 95px;
+}
+.fa-brands {
+	margin-bottom: 10px;
 }
 
-.fa {
-    margin-left: 33%;
-    margin-bottom: 10px;
-}
