@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+    --font-welcome-page: "Playwrite NO", cursive;
+    --bg-primary-color: bg-blue-200;
+    --bg-secondary-color: bg-teal-200;
+}

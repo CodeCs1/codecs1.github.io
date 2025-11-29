@@ -1,12 +1,111 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/src/main.js"></script>
-    <title>CodeCs1's Main page</title>
-  </head>
-  <body>
-    <h3>---This page is under reconstruction---</h3>
-  </body>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/src/main.js"></script>
+  <script type="module" src="/src/modules.js"></script>
+  <link href="/src/app.css" rel="stylesheet">
+  <title>CodeCs1's Main page</title>
+</head>
+
+<body class="dark: bg-[#121212] text-white selection:bg-teal-200 selection:text-[#121212]">
+  <nav class="sticky top-[2%] z-50 shadow bg-[#1d1d1d] m-[2%] rounded-2xl">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="text-xl font-bold select-none">Code-dev</div>
+
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li>
+          <a href="#" class="group relative transition duration-300 hover:text-blue-300">
+            Project
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 group-hover:w-[90%] transition-all duration-300 ease-out"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="group relative transition duration-300 hover:text-blue-300">
+            Documents
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 group-hover:w-[90%] transition-all duration-300 ease-out"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="aboutMe" class="group relative transition duration-300 hover:text-blue-300">
+            About me
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 group-hover:w-[90%] transition-all duration-300 ease-out"></span>
+          </a>
+        </li>
+      </ul>
+
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+      <ul class="space-y-4 font-medium">
+        <li>
+          <a href="#" class="group relative transition duration-300 hover:text-blue-300">
+            Project
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 group-hover:w-[90%] transition-all duration-300 ease-out"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="group relative transition duration-300 hover:text-blue-300">
+            Documents
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 group-hover:w-[90%] transition-all duration-300 ease-out"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="group relative transition duration-300 hover:text-blue-300">
+            About me
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 group-hover:w-[90%] transition-all duration-300 ease-out"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="text-3xl font-bold text-center font-welcome-page py-5">Welcome to my personal page.</h1>
+  <div class="flex">
+    <div class="sticky top-[15%] bg-[#1d1d1d] w-[25%] h-100 m-[2%] rounded-3xl hidden md:block">
+      <p class="text-center font-welcome-page py-3">My Recent Project</p>
+
+      <hr class="ml-[5%] w-[90%] py-2 text-[#444444]">
+      <div class="ml-[5%] mr-[5%] overflow-y-scroll h-[78%] flex flex-col gap-y-2">
+        <a class="bg-blue-200 hover:bg-teal-200 rounded-2xl transition duration-200 h-[50px] text-black px-2 py-1" href="https://github.com/CodeCs1/dcz-rs">
+          <p class="font-bold">dcz-rs (DucaZcript)</p>
+          <div class="text-xs truncate" title="A basic compiler programming language that share the similarity with C/C++ lang.">A basic compiler programming language that share the similarity with C/C++ lang.</div>
+        </a>
+        <a class="bg-blue-200 hover:bg-teal-200 rounded-2xl transition duration-200 h-[50px] text-black px-2 py-1" href="https://github.com/CodeCs1/casm">
+          <p class="font-bold">casm</p>
+          <div class="text-xs truncate" title="My own assembly language">My own assembly language</div>
+        </a>
+
+        <a class="bg-blue-200 hover:bg-teal-200 rounded-2xl transition duration-200 h-[50px] text-black px-2 py-1" href="https://github.com/CodeCs1/TerminalOS_L">
+          <p class="font-bold">TerminalOS_L</p>
+          <div class="text-xs truncate" title="The Cosmos project used to restore the old TerminalOS Project with some new features and fixes.">The Cosmos project used to restore the old TerminalOS Project with some new features and fixes.</div>
+        </a>
+
+      </div>
+    </div>
+    <main class="flex-1 p-6">
+      <p class="text-[#e0e0e0]">
+        This is where I usually share the project that i'm working on (including this webpage) =)
+
+      </p>
+
+    </main>
+  </div>
+
+</body>
+
+<footer class="w-full py-14">
+  <p class="text-center">There is nothing for you to see more.</p>
+</footer>
+
 </html>
